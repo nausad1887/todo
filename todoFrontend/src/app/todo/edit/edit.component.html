@@ -1,0 +1,9 @@
+<div>
+    <i class="material-icons" (click)="onClose()">close</i>
+    <ul>
+        <input type="text" #ToDo class="form-control" (keyup.enter)="onSave()" placeholder="Edit Todo" name="todo" [(ngModel)]="todo.todo">
+        <button>
+            <i class="material-icons" (click)="onSave()">save</i>
+        </button>
+    </ul>
+</div>
