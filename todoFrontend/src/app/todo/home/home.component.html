@@ -22,7 +22,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body" *ngIf="notificationArray.length ; else notShow">
+              <div class="modal-body" *ngIf="notificationArray.length ; else notShowDelete">
                 <div *ngIf="notificationArray.length ; else notShowDelete">
                   <ul *ngFor="let notify of notificationArray">
                     <li>
@@ -31,7 +31,7 @@
                   </ul>
                 </div>
               </div>
-              <ng-template #notShow>
+              <ng-template #notShowDelete>
                 <div class="modal-body">
                   <ul>
                     <li>

@@ -1,23 +1,23 @@
-const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RpZCI6Ik9DSXd0S0YtIiwiaWF0IjoxNTc2NTIxODk4NDU1LCJleHAiOjE1NzY2MDgyOTgsInN1YiI6ImF1dGhUb2tlbiIsImlzcyI6InRvZG9BcHAiLCJkYXRhIjp7InVzZXJJZCI6IjN1bGF2UXN2IiwiZmlyc3ROYW1lIjoiTmF1c2FkIiwibGFzdE5hbWUiOiIiLCJtb2JpbGVOdW1iZXIiOjg3OTc3NjcwNzYsImVtYWlsIjoibmF1c2FkMTg4N0BnbWFpbC5jbyJ9fQ.jorb1gCgm_7I4lypFb9HJtDhpvRiQpjvlrcgtEf8q2k"
+const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RpZCI6IlhzRjJ5YnRuUCIsImlhdCI6MTYwMjAxMTI1NDMzMiwiZXhwIjoxNjAyMDk3NjU0LCJzdWIiOiJhdXRoVG9rZW4iLCJpc3MiOiJ0b2RvQXBwIiwiZGF0YSI6eyJ1c2VySWQiOiJsYWs0aDZZaTciLCJmaXJzdE5hbWUiOiJzaGFtaW0iLCJsYXN0TmFtZSI6IkFobWVkIiwibW9iaWxlTnVtYmVyIjo4MDc0OTk5OTIzLCJhcGlLZXkiOiIxMjM0NTYiLCJlbWFpbCI6InNoYW1pbUBnbWFpbC5jb20ifX0.6TV3Tf9Si_25EAyMlEO0JaTDt5CnSL5hOijn0EwXulg"
 const secretKey = "mySecretKeyThatNoOneKnowsInHisWildDream"
-const userId = '3ulavQsv'
+const userId = 'lak4h6Yi7'
 const socket = io('http://localhost:8081')
 
 let clientJs = () => {
 
     let chatMessage = {
         senderId: userId,
-        senderName: 'Nausad',
-        receiverName: 'Ansari alex',
-        receiverId: 'L13TDqd-',
+        senderName: 'shamim',
+        receiverName: 'shamim1',
+        receiverId: '1iArcc0B0',
         createdOn: Date.now()
     }
 
     let userInfo = {
         senderId: userId,
-        senderName: 'Nausad',
-        receiverName: 'Ansari alex',
-        receiverId: 'L13TDqd-',
+        senderName: 'shamim',
+        receiverName: 'shamim1',
+        receiverId: '1iArcc0B0',
     }
 
     socket.on('verifyUser', (data) => {

@@ -7,7 +7,7 @@ import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoService } from './todo.service';
-import {MatDialogModule} from "@angular/material";
+import { MatDialogModule } from "@angular/material/dialog";
 import { EditComponent } from './edit/edit.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 

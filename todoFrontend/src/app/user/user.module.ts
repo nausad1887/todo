@@ -20,7 +20,7 @@ import { UserService } from './user.service';
     FormsModule,
     ToastrModule.forRoot(),
     RouterModule.forChild([
-      {path: 'signup', component:SignUpComponent},
+      {path: 'signup', component: SignUpComponent},
     ])
   ],
   providers:[UserService]

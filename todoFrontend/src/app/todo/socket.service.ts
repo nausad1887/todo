@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
 })
 export class SocketService implements OnInit {
 
-  public baseUrl="http://127.0.0.1:8081/"
+  public baseUrl ='http://127.0.0.1:8081/'
   socket: SocketIOClient.Socket;
-  
 
-  constructor(public toastr:ToastrManager, public router:Router) {
+
+  constructor(public toastr: ToastrManager, public router: Router) {
     this.socket = io.connect(this.baseUrl);
    }
 
@@ -23,7 +23,7 @@ export class SocketService implements OnInit {
 
 }
 
-  // events to be listened 
+  // events to be listened
 
   public verifyUser = () => {
 
@@ -43,7 +43,7 @@ export class SocketService implements OnInit {
 
     return Observable.create((observer) => {
 
-      this.socket.on("all-onlineUsersList", (userList) => {
+      this.socket.on('all-onlineUsersList', (userList) => {
 
         observer.next(userList);
 
@@ -55,8 +55,8 @@ export class SocketService implements OnInit {
 
   public editButtonClicked = (todo) => {
 
-    this.socket.emit("click", todo);
-   
+    this.socket.emit('click', todo);
+
 
   } // end onlineUserList
 
@@ -64,7 +64,7 @@ export class SocketService implements OnInit {
 
     return Observable.create((observer) => {
 
-      this.socket.on("notify", (todo) => {
+      this.socket.on('notify', (todo) => {
 
         observer.next(todo);
 
@@ -78,7 +78,7 @@ export class SocketService implements OnInit {
 
     return Observable.create((observer) => {
 
-      this.socket.on("come", (userName) => {
+      this.socket.on('come', (userName) => {
 
         observer.next(userName);
 
@@ -123,7 +123,7 @@ export class SocketService implements OnInit {
 
   public disconnectedSocket = () => {
 
-      this.socket.emit("disconnect", '')
+      this.socket.emit('disconnect', '');
 
     } // end Observable
  // end disconnectSocket
@@ -141,7 +141,7 @@ export class SocketService implements OnInit {
 
   public setUser = (authToken) => {
 
-    this.socket.emit("setUser", authToken);
+    this.socket.emit('setUser', authToken);
 
   } // end setUser
 

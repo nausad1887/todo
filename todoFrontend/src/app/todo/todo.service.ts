@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TodoService {
 
-  private url = "http://127.0.0.1:8081/api/v1";
+  private url = 'http://127.0.0.1:8081/api/v1';
 
   constructor(public http: HttpClient, public router: Router) { }
 
@@ -24,9 +24,9 @@ export class TodoService {
 
   public getAlltodo(): any {
 
-    let authToken = Cookie.get('authToken')
+    const authToken = Cookie.get('authToken');
 
-    let myResponse = this.http.get(this.url + "/todo/view/all?authToken=" + authToken);
+    const myResponse = this.http.get(this.url + '/todo/view/all?authToken=' + authToken);
     console.log(myResponse);
     return myResponse;
   }
@@ -34,8 +34,8 @@ export class TodoService {
   public createTodo(item): any {
 
 
-    let authToken = Cookie.get('authToken')
-    let myResponse = this.http.post(this.url + "/todo/create?authToken=" + authToken, item);
+    const authToken = Cookie.get('authToken');
+    const myResponse = this.http.post(this.url + '/todo/create?authToken=' + authToken, item);
     console.log(myResponse);
     return myResponse;
   }
@@ -43,8 +43,8 @@ export class TodoService {
 
   public delete(todoId): any {
 
-    let authToken = Cookie.get('authToken')
-    let myResponse = this.http.post(this.url + "/todo/" + todoId + "/deleteTodo?authToken=" + authToken, todoId);
+    const authToken = Cookie.get('authToken');
+    const myResponse = this.http.post(this.url + '/todo/' + todoId + '/deleteTodo?authToken=' + authToken, todoId);
     console.log(myResponse);
 
     return myResponse;
@@ -54,8 +54,8 @@ export class TodoService {
   public getPerticularTodo(todoId) {
 
 
-    let authToken = Cookie.get('authToken')
-    let myResponse = this.http.get(this.url + "/todo/" + todoId + "/view?authToken=" + authToken);
+    const authToken = Cookie.get('authToken');
+    const myResponse = this.http.get(this.url + '/todo/' + todoId + '/view?authToken=' + authToken);
     console.log(myResponse);
 
     return myResponse;
@@ -65,10 +65,10 @@ export class TodoService {
   public edit(todo) {
 
 
-    console.log(todo.todoId)
-    console.log(todo.todo)
-    let authToken = Cookie.get('authToken')
-    let myResponse = this.http.put(this.url + "/todo/" + todo.todoId + "/edit?authToken=" + authToken, todo);
+    console.log(todo.todoId);
+    console.log(todo.todo);
+    const authToken = Cookie.get('authToken');
+    const myResponse = this.http.put(this.url + '/todo/' + todo.todoId + '/edit?authToken=' + authToken, todo);
     console.log(myResponse);
 
     return myResponse;

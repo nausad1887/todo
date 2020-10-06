@@ -33,7 +33,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const routePath = './app/route'
 fs.readdirSync(routePath).forEach(function (file) {
     if (~file.indexOf('.js')) {
-        console.log(routePath + '/' + file)
         let route = require(routePath + '/' + file)
         route.router(app)
     }
